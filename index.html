@@ -66,11 +66,27 @@
             <!-- this fxn generates a random major scale using the JS Math pkg -->
             function generateMajScale() {
                 let majScale = '';
-                const majScaleList=['C', 'G', 'D', 'A', 'E', 'B', 'F#', 'Db', 'Ab', 'Eb', 'Bb', 'F']
-                
+                const majScaleList=['C', 'G', 'D', 'A', 'E', 'B', 'F#', 'Db', 'Ab', 'Eb', 'Bb', 'F'];
                 return majScaleList[Math.floor((Math.random() * 12))];
-
             }
+
+            <!-- this fxn generates a random minor scale using the JS Math pkg -->
+            function generateMinScale() {
+                let minScale = '';
+                const minScaleList=['A', 'E', 'B', 'F#', 'C#', 'G#', 'Eb', 'Bb', 'F', 'C', 'G', 'D'];
+                return minScaleList[Math.floor((Math.random() * 12))];
+            }
+
+            <!-- this function gets a random binary integer and then generates a scale depending on that value-->
+            function randomScale() {
+                let majMin = Math.round(Math.random());
+                if (majMin === 0) {
+                    return generateMajScale() + ' Major'
+                } else {
+                    return generateMinScale() + ' Minor'
+                }
+            }
+
         </script>
     </head>
     <body>
@@ -81,9 +97,10 @@
         </div>
         <div class="content">
             <p>Press the button to generate a music scale!</p>
-            <p id="num">?</p>
-            <button id="daButton" onclick="getElementById('num').innerHTML=generateMajScale()">Click Me!</button>
+            <p id="num">num</p>
+            <p>
+            <button id="daButton" onclick="getElementById('num').innerHTML=randomScale()">Click Me!</button>
         </div>
-
+        
     </body>
 </html>
