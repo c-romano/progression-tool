@@ -3,23 +3,28 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
-        <title>Super Cool Tool</title>
+        <title>Improv Trainer</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="script.js"></script>
     </head>
     <body>
-        
-        <div class="header">
-            <h1>Music Improvisation Trainer</h1>
-            <h2>Generates a scale, chord progression, and piano fingering.</h2>
-        </div>
-        <div class="content">
-            <div class="opening">
-                <p>Press the button to generate a music scale!</p>
-                <br>
-                <p id="num">num</p>
-                <button id="daButton" onclick="getElementById('num').innerHTML=randomScale()">Click Me!</button>
+        <div class="overlay">
+            <div class="header">
+                    <div class="head-text">
+                        <h1>Improvisation Coach</h1>
+                        <!-- <h2>Generates a scale, chord progression, and piano fingering.</h2> -->
+                    </div>
+            </div>
+            <div class="main">
+                <div class="opening">
+                    <div class="guide">
+                        <p>Press the button to generate a music scale!</p>
+                    </div>
+                    <div class="button">
+                        <button id="daButton" onclick="getElementById('num').innerHTML=randomScale()">Click Me!</button>
+                    </div>
+                </div>
             </div>
         </div>
         
