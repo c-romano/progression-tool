@@ -7,9 +7,9 @@
     src: url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 }
 
-
-html, body {
-    margin:0 auto;
+* {
+    margin: 0;
+    padding: 0;
 }
 
 .overlay {
@@ -24,6 +24,37 @@ html, body {
     background: rgba(0, 0, 0, 0.9);
 }
 
+.header {
+    height: 60px;
+    position: relative;
+    background: #94AEF1;
+}
+
+.head-text {
+    /* Improvisation Coach */
+
+    position: absolute;
+    
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* display: flex; 
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    */
+
+    color: #FFFFFF;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
 .main {
     /* Frame 1 */
 
@@ -33,7 +64,7 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px 20px;
+    /* padding: 10px 20px; */
 
     position: absolute;
     width: 944.74px;
@@ -44,47 +75,10 @@ html, body {
     background: #FFFFFF;
 }
 
-.header {
-    /* Auto Layout */
-
-    position: absolute;
-    height: 72px;
-    left: 0px;
-    right: 1px;
-    top: 0px;
-
-    background: #94AEF1;
-}
-
-.head-text {
-    /* Improvisation Coach */
-
-
-    position: absolute;
-    height: 29px;
-    left: 366px;
-    right: 365px;
-    top: calc(50% - 29px/2 + 0.5px);
-
-    font-family: Barlow;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 24px;
-    line-height: 29px;
-    /* identical to box height */
-
-    /* display: flex; */
-    align-items: center;
-    text-align: center;
-    margin-top: -32px;
-
-    color: #FFFFFF;
-
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
 .opening {
     /* Auto Layout */
+
+    font-family: Barlow;
 
     display: flex;
     flex-direction: row;
