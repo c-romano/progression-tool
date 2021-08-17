@@ -78,41 +78,57 @@
 .opening {
     /* Auto Layout */
 
-    font-family: Barlow;
+    position: absolute;
+    width: 476px;
+    height: 64px;
+    
+    vertical-align: middle;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
+    background-color: green;
 
-    position: static;
-    width: 581.01px;
-    height: 75px;
-    left: 181.87px;
-    top: 10px;
-
-
-    /* Inside Auto Layout */
-
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    margin: 10px 0px;
 }
 
-#num {
-    font-size: 50px;
-    font-weight: bold;
-    font-family: garamond;
-    margin: 3px;
-    margin-bottom: 20px
+.guide {
+    /* Rectangle 2 */
+
+
+    position: absolute;
+    width: 328px;
+    height: 64px;
+    float: left;
+    background: #F4F4F4;
+    border-radius: 60px;
+}
+
+#guide-label {
+    position: absolute;
+    width: 304px;
+    height: 64px;
+    
+
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+
 }
 
 #daButton {
+    position: absolute;
+    width: 136px;
+    height: 40px;
+    float: right;
+    overflow: auto;
+    
+    background: #B2E87C;
+    border: 0.6px solid #000000;
+    border-radius: 32px;
 
-}
-
-button:hover {
-    background-color: #dcdcdc;
+    font-family: Barlow;
 }
