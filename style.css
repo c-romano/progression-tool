@@ -65,6 +65,8 @@
     flex-direction: column;
     align-items: center;
     /* padding: 10px 20px; */
+    flex-wrap: wrap;
+
 
     position: absolute;
     width: 944.74px;
@@ -154,4 +156,128 @@
 
 #daButton:hover {
     background: #6ebc21;
+}
+
+.chords-container {
+    position: absolute;
+    width: 804px;
+    height: 116px;
+    top: 80px;
+    margin-top: 16px;
+
+
+    /* background: green; */
+}
+
+.chord {
+    position: absolute;
+    width: 192px;
+    height: 116px;
+    top: 0px;
+
+    /* background: red; */
+}
+
+.chord-wrapper {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+
+    background: #FCFCFC;
+    border: 1px solid #6D6D6D;
+    border-radius: 11px;
+}
+
+.roman-wrapper {
+    position: absolute;
+    left: -0.5px;
+    top: -0.5px;
+    height: 58px;
+    width: 58px;
+
+    background: rgba(171, 79, 173, 0.71);
+    border-radius: 10px;
+
+    border: solid rgba(171, 79, 173, 0.71) 0.5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.roman-label {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+
+    line-height: 58px;
+
+    vertical-align: middle;
+
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    
+    text-align: center;
+
+    letter-spacing: 0;
+
+    color: #FFFFFF;
+}
+
+.chord-name {
+    position: absolute;
+    left: 29.17%;
+    right: 0%;
+    top: 0%;
+    bottom: 48.28%;
+
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 60px;
+    
+    text-align: center;
+
+    color: #000000;
+}
+
+.chord-notes {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 58px;
+    bottom: 0%;
+
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 54px;
+
+    text-align: center;
+
+    color: #6D6D6D;
+}
+
+#chord1 {
+    left: 0px;
+}
+
+#chord2 {
+    left: 204px;
+}
+
+#chord3 {
+    left: 408px;
+}
+
+#chord4 {
+    left: 612px;
 }
