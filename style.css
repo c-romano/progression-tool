@@ -281,3 +281,198 @@
 #chord4 {
     left: 612px;
 }
+
+.key-info {
+    position: absolute;
+    width: 556px;
+    height: 284px;
+    top: 212px;
+    margin-top: 16px;
+
+}
+
+.scale-name {
+    position: absolute;
+    width: 272px;
+    height: 84px;
+    left: 0px;
+    top: 0px;
+
+    background: #F4F4F4;
+    border-radius: 36px;
+}
+
+.scale-name-label {
+    /* Scale Name: */
+
+
+    position: absolute;
+    width: 272px;
+    height: 24px;
+    left: 0px;
+    top: 4px;
+
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    text-indent: 24px;
+
+    color: #000000;
+}
+
+.scale {
+    position: absolute;
+    width: 272px;
+    height: 76px;
+    left: 0px;
+    top: 8px;
+
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 76px;
+
+    text-align: center;
+
+    color: #000000;
+}
+
+.progression-viewer {
+    position: absolute;
+    width: 272px;
+    height: 84px;
+    left: 0px;
+    top: 100px;
+
+    background: #F4F4F4;
+    border-radius: 36px;
+}
+
+.prog-viewer-label {
+    position: absolute;
+    width: 272px;
+    height: 24px;
+    left: 0px;
+    top: 4px;
+
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    text-indent: 24px;
+
+    color: #000000;
+}
+
+.progression {
+    position: absolute;
+    width: 272px;
+    height: 76px;
+    left: 0px;
+    top: 8px;
+
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 76px;
+
+    text-align: center;
+
+    color: #000000;
+}
+
+.note-viewer {
+    position: absolute;
+    width: 556px;
+    height: 84px;
+    left: 0px;
+    top: 200px;
+
+    background: #F4F4F4;
+    border-radius: 36px;
+}
+
+.note-viewer-label {
+    position: absolute;
+    width: 273px;
+    height: 24px;
+    left: 0px;
+    top: 4px;
+
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    text-indent: 24px;
+
+    color: #000000;
+
+}
+
+.notes {
+    position: absolute;
+    width: 556px;
+    height: 76px;
+    left: 0px;
+    top: 8px;
+
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 76px;
+    
+    text-align: center;
+
+    color: #000000;
+}
+
+.note-diagram-wrapper {
+    position: absolute;
+    width: 272px;
+    height: 173px;
+    left: 284px;
+    top: 4px;
+
+}
+
+.note-diagram-label {
+    position: absolute;
+    width: 272px;
+    height: 24px;
+    left: 0px;
+    top: 0px;
+
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    text-indent: 12px;
+
+    color: #000000;
+}
+
+.note-diagram {
+    position: absolute;
+    width: 247px;
+    height: 151px;
+    left: 0px;
+    top: 22px;
+
+    background: url(/images/Piano\ note\ diagram.png);
+}
