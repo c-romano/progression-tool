@@ -20,8 +20,6 @@
     right: 0px;
     top: 0px;
     bottom: 0px;
-
-    background: rgba(0, 0, 0, 0.9);
 }
 
 .header {
@@ -476,3 +474,22 @@
 
     background: url(/images/Piano\ note\ diagram.png);
 }
+
+
+/* FOR TESTING ONLY-- REMOVE LATER */
+
+
+#test-button {
+    top: 550px;
+    left: 50%;
+    position: relative;
+    background-color: red;
+}
+
+#test-p {
+    top: 530px;
+    left: 75%;
+    position: relative;
+}
+
+/* END OF TESTING REGION */
