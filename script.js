@@ -37,10 +37,15 @@ let minProgressionArray = [
     ["maj6", "min1", "maj4", "maj7"]
 ]
 
+// for converting chord to roman numeral
+let majRomanNumerals = ["I", "II", "III", "IV", "V", "VI", "VII"];
+let minRomanNumerals = ["i", "ii", "iii", "iv", "v", "vi", "vi"];
+
 // creates a class for scales
 class MusicScale {
 
     noteArray = [];
+    scaleName;
 
     constructor (id, tonic, majOrMin) {
         this.id = id;
@@ -48,7 +53,8 @@ class MusicScale {
         this.majOrMin = majOrMin;
     };
 
-    initializeArray() {
+    // sets up the array and proper scale name
+    initializeScale() {
         this.noteArray.push(this.tonic);
         
         /*
@@ -73,6 +79,9 @@ class MusicScale {
                     this.noteArray.push(doubledNotes[notePosition]);
                 };
             };
+
+            this.scaleName = this.scaleTonic + " Major"
+
         } else {
             for (let i=0; i < minorScaleFormula.length; i++) {
                 if (minorScaleFormula[i] === 2) {
@@ -83,6 +92,8 @@ class MusicScale {
                     this.noteArray.push(doubledNotes[notePosition]);
                 };
             };
+
+            this.scaleName = this.scaleTonic + " Minor"
         };
     };
 };
@@ -164,7 +175,7 @@ function buildScale(desiredScaleCode) {
     };
 
     let currentScale = new MusicScale(desiredScaleCode, scaleTonic, majOrMin);
-    currentScale.initializeArray();
+    currentScale.initializeScale();
 
     return currentScale;
 
@@ -196,25 +207,92 @@ function generateChord(rootNote, chordType) {
     return currentChord;
 };
 
+// takes chord root and type to construct proper name
+function findChordName(rootNote, chordType) {
+    if (chordType === "maj") {
+        return rootNote + " Major"
+    } else {
+        return rootNote + " Minor"
+    };
+};
+
+// takes chord number and type and finds numeral
+function findChordNumeral(chordNumber, chordType) {
+    if (chordType === "maj") {
+        return majRomanNumerals[chordNumber-1]
+    } else {
+        return minRomanNumerals[chordNumber-1]
+    };
+};
+
 // calls generate progression formula and parses chords given key
 function generateChordProgression(musicScale) {
     let progression = generateProgression(musicScale.majOrMin);
     
+    let progressionDetails = [];
+
+    let actualChordNameArray = [];
+    let actualChordNumeral = [];
     let actualChordArray = [];
 
     for (let i=0; i < progression.length; i++) {
         let majOrMinChord = progression[i].slice(0,3);
         let chordRoot = musicScale.noteArray[progression[i].slice(3,4)-1];
+        let chordNumber = progression[i].slice(3,4);
 
+        actualChordNameArray.push(findChordName(chordRoot, majOrMinChord));
+        actualChordNumeral.push(findChordNumeral(chordNumber, majOrMinChord));
+        
         actualChordArray.push(generateChord(chordRoot, majOrMinChord));
 
     };
     
-    return actualChordArray;
+    // adds the different components to one unified array
+    progressionDetails.push(actualChordNameArray, actualChordNumeral, actualChordArray);
+
+    return progressionDetails;
 };
 
 // the main function that will execute after pressing the button
 function generateRandomImprov() {
-    buildScale(randomScale());
+    let generatedScale = buildScale(randomScale());
+    let keyDetails = generateChordProgression(generatedScale);
 
+    // debated using a loop for this
+
+    // updates chord names on HTML
+    document.getElementById("chord1-name").innerHTML=keyDetails[0][0];
+    document.getElementById("chord2-name").innerHTML=keyDetails[0][1];
+    document.getElementById("chord3-name").innerHTML=keyDetails[0][2];
+    document.getElementById("chord4-name").innerHTML=keyDetails[0][3];
+
+    // updates roman numerals on HTML
+    document.getElementById("roman1").innerHTML=keyDetails[1][0];
+    document.getElementById("roman2").innerHTML=keyDetails[1][1];
+    document.getElementById("roman3").innerHTML=keyDetails[1][2];
+    document.getElementById("roman4").innerHTML=keyDetails[1][3];
+
+    // chord notes cleanup, probably not needed.
+    /*
+    let chord1Notes = keyDetails[2][0][0] + " - " + keyDetails[2][0][1]
+    + " - " +keyDetails[2][0][2];
+    */
+
+    // updates chord notes on HTML
+    document.getElementById("chord1-notes").innerHTML=keyDetails[2][0][0]
+    + " - " + keyDetails[2][0][1] + " - " +keyDetails[2][0][2];
+
+    document.getElementById("chord2-notes").innerHTML=keyDetails[2][1][0]
+    + " - " + keyDetails[2][1][1] + " - " +keyDetails[2][1][2];
+
+    document.getElementById("chord3-notes").innerHTML=keyDetails[2][2][0]
+    + " - " + keyDetails[2][2][1] + " - " +keyDetails[2][2][2];
+
+    document.getElementById("chord4-notes").innerHTML=keyDetails[2][3][0]
+    + " - " + keyDetails[2][3][1] + " - " +keyDetails[2][3][2];
+
+    // updates scale name
+    document.getElementById("scale").innerHTML=generatedScale.scaleName;
+
+    return "yay";
 }
