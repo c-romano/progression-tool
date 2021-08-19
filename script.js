@@ -1,5 +1,3 @@
-console.log("hello")
-
 /* this is where the HTML elements will be saved to variables
 
 const scale = document.getElementByClass("scale");
@@ -55,20 +53,20 @@ class MusicScale {
             for (let i=0; i < majorScaleFormula.length; i++) {
                 if (majorScaleFormula[i] === 2) {
                     notePosition += 2;
-                    this.noteArray.push(majorScaleFormula[notePosition]);
+                    this.noteArray.push(doubledNotes[notePosition]);
                 } else {
                     notePosition += 1;
-                    this.noteArray.push(majorScaleFormula[notePosition]);
+                    this.noteArray.push(mdoubledNotes[notePosition]);
                 };
             };
         } else {
             for (let i=0; i < minorScaleFormula.length; i++) {
                 if (minorScaleFormula[i] === 2) {
                     notePosition += 2;
-                    this.noteArray.push(minorScaleFormula[notePosition]);
+                    this.noteArray.push(doubledNotes[notePosition]);
                 } else {
                     notePosition += 1;
-                    this.noteArray.push(minorScaleFormula[notePosition]);
+                    this.noteArray.push(doubledNotes[notePosition]);
                 };
             };
         };
@@ -135,7 +133,7 @@ function buildScale(desiredScaleCode) {
     
     currentScale.initializeArray();
 
-    return currentScale.noteArray;
+    return currentScale.id + " " + currentScale.noteArray;
 
 };
 
