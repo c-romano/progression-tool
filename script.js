@@ -80,7 +80,7 @@ class MusicScale {
                 };
             };
 
-            this.scaleName = this.scaleTonic + " Major"
+            this.scaleName = this.tonic + " Major"
 
         } else {
             for (let i=0; i < minorScaleFormula.length; i++) {
@@ -93,9 +93,22 @@ class MusicScale {
                 };
             };
 
-            this.scaleName = this.scaleTonic + " Minor"
+            this.scaleName = this.tonic + " Minor"
         };
     };
+
+    // method that generated a formatted string of scale notes
+    convertToString() {
+        let scaleString = this.noteArray[0];
+
+        for (let i=1; i < this.noteArray.length; i++) {
+            scaleString += " - ";
+            scaleString += this.noteArray[i];
+        }
+
+        return scaleString;
+    }
+
 };
 
 // could add chord class here but probably overkill
@@ -184,7 +197,6 @@ function buildScale(desiredScaleCode) {
 // takes chord root note and type and returns a chord array
 function generateChord(rootNote, chordType) {
     currentChord = [];
-    console.log(rootNote + chordType);
 
     switch (chordType) { 
         case "maj":
@@ -201,8 +213,6 @@ function generateChord(rootNote, chordType) {
             console.log("error")
             break;
     };
-
-    console.log(currentChord);
 
     return currentChord;
 };
@@ -247,9 +257,14 @@ function generateChordProgression(musicScale) {
 
     };
     
-    // adds the different components to one unified array
-    progressionDetails.push(actualChordNameArray, actualChordNumeral, actualChordArray);
+    // creates a string of the progression to eventually be displayed
+    let formattedProgression = actualChordNumeral[0] + " - " + actualChordNumeral[1] + " - "
+    + actualChordNumeral[2] + " - " + actualChordNumeral[3];
 
+    // adds the different components to one unified array
+    progressionDetails.push(actualChordNameArray, actualChordNumeral, actualChordArray,
+    formattedProgression);
+    
     return progressionDetails;
 };
 
@@ -272,12 +287,6 @@ function generateRandomImprov() {
     document.getElementById("roman3").innerHTML=keyDetails[1][2];
     document.getElementById("roman4").innerHTML=keyDetails[1][3];
 
-    // chord notes cleanup, probably not needed.
-    /*
-    let chord1Notes = keyDetails[2][0][0] + " - " + keyDetails[2][0][1]
-    + " - " +keyDetails[2][0][2];
-    */
-
     // updates chord notes on HTML
     document.getElementById("chord1-notes").innerHTML=keyDetails[2][0][0]
     + " - " + keyDetails[2][0][1] + " - " +keyDetails[2][0][2];
@@ -291,8 +300,13 @@ function generateRandomImprov() {
     document.getElementById("chord4-notes").innerHTML=keyDetails[2][3][0]
     + " - " + keyDetails[2][3][1] + " - " +keyDetails[2][3][2];
 
-    // updates scale name
+    // updates scale name displayer
     document.getElementById("scale").innerHTML=generatedScale.scaleName;
 
-    return "yay";
+    // updates chord progression displayer
+    document.getElementById("progression").innerHTML=keyDetails[3];
+
+    // updates scale note displayer
+    document.getElementById("notes").innerHTML=generatedScale.convertToString();
+    
 }

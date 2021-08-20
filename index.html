@@ -22,7 +22,7 @@
                         <p id="guide-label">Press the button to have a random scale and chord progression generated for you.</p>
                     </div>
                     <div class="button-wrapper">
-                        <button id="daButton" onclick="getElementById('num').innerHTML=randomScale()">Generate!</button>
+                        <button id="daButton" onclick="generateRandomImprov()">Generate!</button>
                     </div>
                 </div>
                 <div class="chords-container">
@@ -100,7 +100,7 @@
                         <h6 class="prog-viewer-label">
                             Progression:
                         </h6>
-                        <h5 class="progression">
+                        <h5 class="progression" id="progression">
                             I - V - vi - IV
                         </h5>
                     </div>
@@ -118,19 +118,21 @@
                         <h6 class="note-viewer-label">
                             Scale Notes:
                         </h6>
-                        <h5 class="notes">
+                        <h5 class="notes" id="notes">
                             Gb - Ab - Bb - Cb - Db - Eb - F - Gb
                         </h5>
                     </div>
                 </div>
             </div>
 
-            <!-- experimental div to test JS stuff -->
+            <!-- testing section
+
             <div id="test-div">
                 <button id="test-button" onclick='getElementById("test-p").innerHTML=generateRandomImprov()'>Test</button>
                 <p id="test-p">test</p>
             </div>
-            <!-- end of testing -->
+
+            -->
 
         </div>
 
