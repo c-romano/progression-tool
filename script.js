@@ -7,8 +7,16 @@ const notes = document.getElementByClass("notes");
 */
 
 // initializes note arrays for calculations
-const pianoNotes = ["C","C#","D","D#","E","F","F#","G","G#","A","A#","B"];
-let doubledNotes = pianoNotes.concat(pianoNotes);
+const pianoNotesSharp = ["C","C#","D","D#","E","F","F#","G","G#","A","A#","B"];
+let doubledNotesSharp = pianoNotesSharp.concat(pianoNotesSharp);
+
+const pianoNotesFlat = ["C","Db","D","Eb","E","F","Gb","G","Ab","A","Bb","B"];
+let doubledNotesFlat = pianoNotesFlat.concat(pianoNotesFlat);
+
+// arrays of scale tonics, ordered by circle of fifths
+// Gb major and Eb minor are used more often than their alternative (the inner arrays)
+const majScaleList=['C', 'G', 'D', 'A', 'E', 'B', ['F#', 'Gb'], 'Db', 'Ab', 'Eb', 'Bb', 'F'];
+const minScaleList=['A', 'E', 'B', 'F#', 'C#', 'G#', ['D#', 'Eb'], 'Bb', 'F', 'C', 'G', 'D'];
 
 // formulas to create a major or minor scale --
 // in terms of successive semitones/steps to add to the root note
@@ -46,6 +54,8 @@ class MusicScale {
 
     noteArray = [];
     scaleName;
+    sharpOrFlat;
+    allDegrees;
 
     constructor (id, tonic, majOrMin) {
         this.id = id;
@@ -55,6 +65,9 @@ class MusicScale {
 
     // sets up the array and proper scale name
     initializeScale() {
+        let doubledNotes = [];
+        let notePosition;
+        
         this.noteArray.push(this.tonic);
         
         /*
@@ -67,7 +80,66 @@ class MusicScale {
         };
         */
 
-        let notePosition = doubledNotes.indexOf(this.tonic);
+        // Determines whether sharps or flats will be used
+        switch (this.majOrMin) {
+            case "maj":
+
+                // first if handles F#/Gb edgecase
+                if (majScaleList[6].includes(this.tonic)) {
+                    if (this.tonic[1] === "#") {
+                        this.sharpOrFlat = "sharp";
+
+                    } else {
+                        this.sharpOrFlat = "flat";
+                    };
+
+                // this case for all other major sharp scenarios    
+                } else if (majScaleList.indexOf(this.tonic) <= 5) {
+                    this.sharpOrFlat = "sharp";
+                
+                // else scale must have flats
+                } else {
+                    this.sharpOrFlat = "flat";
+                };
+
+                break;
+
+            case "min":
+
+                // first if handles D#/Eb edgecase
+                if (minScaleList[6].includes(this.tonic)) {
+                    if (this.tonic[1] === "#") {
+                        this.sharpOrFlat = "sharp";
+                    } else {
+                        this.sharpOrFlat = "flat";
+                    };
+
+                // this case for all other minor flat scenarios    
+                } else if (minScaleList.indexOf(this.tonic) <= 5) {
+                    this.sharpOrFlat = "sharp";
+                
+                // else scale must have flats
+                } else {
+                    this.sharpOrFlat = "flat";
+                };
+
+                break;
+        };
+
+        // determines which note array to use and creates a new doubled one
+        switch (this.sharpOrFlat) {
+            case "sharp":
+                doubledNotes = doubledNotesSharp;
+                notePosition = doubledNotes.indexOf(this.tonic);
+                break;
+            case "flat":
+                doubledNotes = doubledNotesFlat;
+                notePosition = doubledNotes.indexOf(this.tonic);
+                break;
+        };
+
+        // saves full note list for later use
+        this.allDegrees = doubledNotes;
 
         if (this.majOrMin === "maj") {
             for (let i=0; i < majorScaleFormula.length; i++) {
@@ -116,22 +188,29 @@ class MusicScale {
 // this fxn generates a random major scale using the JS Math pkg
 function generateMajScale() {
     let majScale = '';
-    const majScaleList=['C', 'G', 'D', 'A', 'E', 'B', 'F#', 'C#', 'G#', 'D#', 'A#', 'F'];
+    let root = '';
+    // const majScaleList=['C', 'G', 'D', 'A', 'E', 'B', 'F#', 'C#', 'G#', 'D#', 'A#', 'F'];
 
-    // actual scale list below. Converted to sharps for consistency.
-    // const majScaleList=['C', 'G', 'D', 'A', 'E', 'B', 'F#', 'Db', 'Ab', 'Eb', 'Bb', 'F'];
+    root = majScaleList[Math.floor((Math.random() * 12))]
 
-    return majScaleList[Math.floor((Math.random() * 12))] + "maj";
+    if (root === majScaleList[6]) {
+        root = majScaleList[6][Math.round((Math.random()))];
+    }
+    return root + "maj"
 };
 
 // this fxn generates a random minor scale using the JS Math pkg
 function generateMinScale() {
     let minScale = '';
-    const minScaleList=['A', 'E', 'B', 'F#', 'C#', 'G#', 'D#', 'A#', 'F', 'C', 'G', 'D'];
+    let root = '';
+    // const minScaleList=['A', 'E', 'B', 'F#', 'C#', 'G#', 'D#', 'A#', 'F', 'C', 'G', 'D'];
     
-    // actual scale list is below. Everything was converted to sharps for consistency.
-    //const minScaleList=['A', 'E', 'B', 'F#', 'C#', 'G#', 'Eb', 'Bb', 'F', 'C', 'G', 'D'];
-    return minScaleList[Math.floor((Math.random() * 12))] + "min";
+    root = minScaleList[Math.floor((Math.random() * 12))]
+
+    if (root === minScaleList[6]) {
+        root = minScaleList[6][Math.round((Math.random()))];
+    }
+    return root + "min";
 };
 
 // this function gets a random binary integer and then generates a scale depending on that value
@@ -153,12 +232,12 @@ function generateProgression(majMin) {
     };
 }
 
-
-
 // takes a scale code and returns all scale degrees in operatable format
 function buildScale(desiredScaleCode) {
     let scaleTonic ="";
     let majOrMin = "";
+    
+    // determines the tonic or key
     if (desiredScaleCode[1] === "m") {
         scaleTonic=desiredScaleCode[0];
         switch(desiredScaleCode.slice(1,4)) {
@@ -195,8 +274,10 @@ function buildScale(desiredScaleCode) {
 };
 
 // takes chord root note and type and returns a chord array
-function generateChord(rootNote, chordType) {
+function generateChord(rootNote, chordType, chordScale) {
     currentChord = [];
+
+    doubledNotes = chordScale;
 
     switch (chordType) { 
         case "maj":
@@ -253,7 +334,7 @@ function generateChordProgression(musicScale) {
         actualChordNameArray.push(findChordName(chordRoot, majOrMinChord));
         actualChordNumeral.push(findChordNumeral(chordNumber, majOrMinChord));
         
-        actualChordArray.push(generateChord(chordRoot, majOrMinChord));
+        actualChordArray.push(generateChord(chordRoot, majOrMinChord, musicScale.allDegrees));
 
     };
     
@@ -308,5 +389,5 @@ function generateRandomImprov() {
 
     // updates scale note displayer
     document.getElementById("notes").innerHTML=generatedScale.convertToString();
-    
+
 }
