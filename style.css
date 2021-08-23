@@ -42,12 +42,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-    /* display: flex; 
-    text-align: center;
-    display: inline-block;
-    vertical-align: middle;
-    */
-
     color: #FFFFFF;
 
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -476,7 +470,7 @@
 }
 
 
-/* FOR TESTING ONLY-- REMOVE LATER */
+/* FOR TESTING ONLY-- REMOVE LATER
 
 
 #test-button {
@@ -492,4 +486,493 @@
     position: relative;
 }
 
-/* END OF TESTING REGION */
+END OF TESTING REGION */
+
+/* Mobile Layout */
+
+@media screen and (max-width: 490px) {
+    
+    .overlay {
+        /* overlay */
+    
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
+
+        width: 100%;
+    }
+
+    .header {
+        height: 44px;
+        width: 100%;
+        position: absolute;
+
+        background: #94AEF1;
+    }
+    
+    .head-text {
+        /* Improvisation Coach */
+    
+        position: absolute;
+        
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 10px;
+    
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    
+        color: #FFFFFF;
+    
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .main {
+        /* Auto Layout */
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* padding: 10px 20px; */
+        flex-wrap: wrap;
+    
+        position: absolute;
+        width: 378px;
+        height: 624px;
+        left: calc(50% - 378px/2);
+        top: 60px;
+
+    
+        background: #000000;
+    }
+    
+    /* EVERYTHING BELOW THIS POINT NEEDS TO BE MODIFIED */
+
+
+    .opening {
+        /* Auto Layout */
+        display: none;
+        position: absolute;
+        width: 476px;
+        height: 64px;
+        top: 16px;
+        z-index: 1;
+    
+        vertical-align: middle;
+    
+        /* background-color: green; */
+    
+    }
+    
+    .guide {
+        /* Rectangle 2 */
+        display: none;
+        
+        position: absolute;
+        width: 328px;
+        height: 64px;
+        float: left;
+    
+        z-index: 4;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        background: #F4F4F4;
+        border-radius: 60px;
+    }
+    
+    #guide-label {
+    
+        width: calc(328px - 24px);
+    
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        text-align: center;
+    
+        z-index: 5;
+    
+        color: #000000;
+    
+    }
+    
+    .button-wrapper {
+        position: relative;
+        height: 100%;
+        z-index: 2;
+    }
+    
+    #daButton {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0px;
+    
+        width: 136px;
+        height: 40px;
+    
+        z-index: 3;
+    
+        background: #B2E87C;
+        border: 0.6px solid #000000;
+        border-radius: 32px;
+    
+        font-family: Barlow;
+        font-size: 18px;
+        font-weight: 600;
+    
+    }
+    
+    #daButton:hover {
+        background: #6ebc21;
+    }
+    
+    .chords-container {
+        display: none;
+
+        position: absolute;
+        width: 804px;
+        height: 116px;
+        top: 80px;
+        margin-top: 16px;
+    
+    
+        /* background: green; */
+    }
+    
+    .chord {
+        position: absolute;
+        width: 192px;
+        height: 116px;
+        top: 0px;
+    
+        /* background: red; */
+    }
+    
+    .chord-wrapper {
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        top: 0%;
+        bottom: 0%;
+    
+        background: #FCFCFC;
+        border: 1px solid #6D6D6D;
+        border-radius: 11px;
+    }
+    
+    .roman-wrapper {
+        position: absolute;
+        left: -0.5px;
+        top: -0.5px;
+        height: 58px;
+        width: 58px;
+    
+        background: rgba(171, 79, 173, 0.71);
+        border-radius: 10px;
+    
+        border: solid rgba(171, 79, 173, 0.71) 0.5px;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .roman-label {
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        top: 0%;
+        bottom: 0%;
+    
+        line-height: 58px;
+    
+        vertical-align: middle;
+    
+        font-family: Noto Sans;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 30px;
+        
+        text-align: center;
+    
+        letter-spacing: 0;
+    
+        color: #FFFFFF;
+    }
+    
+    .chord-name {
+        position: absolute;
+        left: 29.17%;
+        right: 0%;
+        top: 0%;
+        bottom: 48.28%;
+    
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 60px;
+        
+        text-align: center;
+    
+        color: #000000;
+    }
+    
+    .chord-notes {
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        top: 58px;
+        bottom: 0%;
+    
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 54px;
+    
+        text-align: center;
+    
+        color: #6D6D6D;
+    }
+    
+    #chord1 {
+        left: 0px;
+    }
+    
+    #chord2 {
+        left: 204px;
+    }
+    
+    #chord3 {
+        left: 408px;
+    }
+    
+    #chord4 {
+        left: 612px;
+    }
+    
+    .key-info {
+        display: none;
+
+        position: absolute;
+        width: 556px;
+        height: 284px;
+        top: 212px;
+        margin-top: 16px;
+    
+    }
+    
+    .scale-name {
+        position: absolute;
+        width: 272px;
+        height: 84px;
+        left: 0px;
+        top: 0px;
+    
+        background: #F4F4F4;
+        border-radius: 36px;
+    }
+    
+    .scale-name-label {
+        /* Scale Name: */
+    
+    
+        position: absolute;
+        width: 272px;
+        height: 24px;
+        left: 0px;
+        top: 4px;
+    
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        display: flex;
+        align-items: center;
+        text-indent: 24px;
+    
+        color: #000000;
+    }
+    
+    .scale {
+        position: absolute;
+        width: 272px;
+        height: 76px;
+        left: 0px;
+        top: 8px;
+    
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 76px;
+    
+        text-align: center;
+    
+        color: #000000;
+    }
+    
+    .progression-viewer {
+        position: absolute;
+        width: 272px;
+        height: 84px;
+        left: 0px;
+        top: 100px;
+    
+        background: #F4F4F4;
+        border-radius: 36px;
+    }
+    
+    .prog-viewer-label {
+        position: absolute;
+        width: 272px;
+        height: 24px;
+        left: 0px;
+        top: 4px;
+    
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        display: flex;
+        align-items: center;
+        text-indent: 24px;
+    
+        color: #000000;
+    }
+    
+    .progression {
+        position: absolute;
+        width: 272px;
+        height: 76px;
+        left: 0px;
+        top: 8px;
+    
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 76px;
+    
+        text-align: center;
+    
+        color: #000000;
+    }
+    
+    .note-viewer {
+        position: absolute;
+        width: 556px;
+        height: 84px;
+        left: 0px;
+        top: 200px;
+    
+        background: #F4F4F4;
+        border-radius: 36px;
+    }
+    
+    .note-viewer-label {
+        position: absolute;
+        width: 273px;
+        height: 24px;
+        left: 0px;
+        top: 4px;
+    
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        display: flex;
+        align-items: center;
+        text-indent: 24px;
+    
+        color: #000000;
+    
+    }
+    
+    .notes {
+        position: absolute;
+        width: 556px;
+        height: 76px;
+        left: 0px;
+        top: 8px;
+    
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 76px;
+        
+        text-align: center;
+    
+        color: #000000;
+    }
+    
+    .note-diagram-wrapper {
+        position: absolute;
+        width: 272px;
+        height: 173px;
+        left: 284px;
+        top: 4px;
+    
+    }
+    
+    .note-diagram-label {
+        position: absolute;
+        width: 272px;
+        height: 24px;
+        left: 0px;
+        top: 0px;
+    
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        display: flex;
+        align-items: center;
+        text-indent: 12px;
+    
+        color: #000000;
+    }
+    
+    .note-diagram {
+        position: absolute;
+        width: 247px;
+        height: 151px;
+        left: 0px;
+        top: 22px;
+    
+        background: url(/images/Piano\ note\ diagram.png);
+    }
+    
+    
+    /* FOR TESTING ONLY-- REMOVE LATER */
+    
+    
+    #test-button {
+        top: 550px;
+        left: 50%;
+        position: relative;
+        background-color: red;
+    }
+    
+    #test-p {
+        top: 530px;
+        left: 75%;
+        position: relative;
+    }
+   
+
+}
