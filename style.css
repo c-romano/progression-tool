@@ -119,6 +119,8 @@
 
 }
 
+#mobile-guide { display: none;}
+
 .button-wrapper {
     position: relative;
     height: 100%;
@@ -547,19 +549,16 @@ END OF TESTING REGION */
         top: 60px;
 
     
-        background: #000000;
+        background: #FFFFFF;
     }
     
-    /* EVERYTHING BELOW THIS POINT NEEDS TO BE MODIFIED */
-
-
     .opening {
         /* Auto Layout */
-        display: none;
         position: absolute;
-        width: 476px;
-        height: 64px;
-        top: 16px;
+        width: 337px;
+        height: 56px;
+        left: 21px;
+        top: 0px;
         z-index: 1;
     
         vertical-align: middle;
@@ -569,38 +568,44 @@ END OF TESTING REGION */
     }
     
     .guide {
-        /* Rectangle 2 */
-        display: none;
-        
         position: absolute;
-        width: 328px;
-        height: 64px;
+        width: 227px;
+        height: 56px;
+        left: 0px;
+        top: 0px;
+
         float: left;
     
         z-index: 4;
-    
+        /*
         display: flex;
         align-items: center;
         justify-content: center;
-    
+        */
         background: #F4F4F4;
         border-radius: 60px;
     }
     
-    #guide-label {
-    
-        width: calc(328px - 24px);
+    #guide-label { display: none; }
+
+    #mobile-guide {
+        position: absolute;
+        display: inline-block;
+        
+        width: calc(227px - 20px);
+        height: 100%;
+        top: 8.5px;
     
         font-family: Barlow;
         font-style: normal;
         font-weight: 500;
-        font-size: 14px;
+        font-size: 15px;
         text-align: center;
     
         z-index: 5;
     
         color: #000000;
-    
+
     }
     
     .button-wrapper {
