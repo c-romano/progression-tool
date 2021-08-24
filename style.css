@@ -87,7 +87,6 @@
 .guide {
     /* Rectangle 2 */
 
-
     position: absolute;
     width: 328px;
     height: 64px;
@@ -443,6 +442,8 @@
 }
 
 .note-diagram-label {
+    display: inline;
+    
     position: absolute;
     width: 272px;
     height: 24px;
@@ -459,6 +460,10 @@
     text-indent: 12px;
 
     color: #000000;
+}
+
+.mobile-diagram-label {
+    display: none;
 }
 
 .note-diagram {
@@ -777,16 +782,65 @@ END OF TESTING REGION */
     }
     
     .key-info {
-        display: none;
-
         position: absolute;
-        width: 556px;
-        height: 284px;
-        top: 212px;
-        margin-top: 16px;
+        
+        width: 378px;
+        height: 324px;
+        left: 0px;
+        top: 292px;
+        margin-top: 10px;
+
+        background-color: blue;
     
     }
     
+    .note-diagram-wrapper {
+        position: absolute;
+        height: 182px;
+        width: 300px;
+        left: 39px;
+        right: 39px;
+        top: 0px;
+        
+        background-color: red;
+
+    }
+    
+    .note-diagram-label {
+        display: none;
+    }
+    
+    .mobile-diagram-label {
+        display: inline;
+
+        position: absolute;
+        width: 300px;
+        height: 24px;
+        left: 0px;
+        top: 0px;
+    
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+
+        text-align: center;
+    
+        color: #000000;
+    }
+
+    .note-diagram {
+        position: absolute;
+        width: 256px;
+        height: 157px;
+        left: 22px;
+        top: 24px;
+    
+        background: url(/images/Piano\ note\ diagram.png);
+    }
+    
+
     .scale-name {
         position: absolute;
         width: 272px;
@@ -934,45 +988,6 @@ END OF TESTING REGION */
     
         color: #000000;
     }
-    
-    .note-diagram-wrapper {
-        position: absolute;
-        width: 272px;
-        height: 173px;
-        left: 284px;
-        top: 4px;
-    
-    }
-    
-    .note-diagram-label {
-        position: absolute;
-        width: 272px;
-        height: 24px;
-        left: 0px;
-        top: 0px;
-    
-        font-family: Barlow;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 19px;
-        display: flex;
-        align-items: center;
-        text-indent: 12px;
-    
-        color: #000000;
-    }
-    
-    .note-diagram {
-        position: absolute;
-        width: 247px;
-        height: 151px;
-        left: 0px;
-        top: 22px;
-    
-        background: url(/images/Piano\ note\ diagram.png);
-    }
-    
     
     /* FOR TESTING ONLY-- REMOVE LATER */
     
