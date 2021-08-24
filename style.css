@@ -565,6 +565,7 @@ END OF TESTING REGION */
         left: calc(50% - 378px/2);
         top: 60px;
 
+        padding-bottom: 16px;
     
         background: #FFFFFF;
     }
@@ -670,7 +671,6 @@ END OF TESTING REGION */
 
         margin-top: 16px;
     
-        background: green;
     }
     
     .chord {
@@ -697,13 +697,13 @@ END OF TESTING REGION */
     
     .roman-wrapper {
         position: absolute;
-        left: 0px;
-        top: 0px;
+        left: -0.4px;
+        top: -0.4px;
         height: 56px;
         width: 56px;
     
         background: rgba(171, 79, 173, 0.71);
-        border-radius: 11px;
+        border-radius: 10.5px;
     
         /* border: solid rgba(171, 79, 173, 0.71) 0.5px; */
     
@@ -801,8 +801,6 @@ END OF TESTING REGION */
         left: 0px;
         top: 292px;
         margin-top: 10px;
-
-        background-color: blue;
     
     }
     
@@ -870,19 +868,21 @@ END OF TESTING REGION */
     }
     
     .scale-name-label-mobile {
-        display: inline-block;
+        display: inline;
         
         position: absolute;
         width: 183px;
         height: 24px;
-        left: 0px;
         top: 0px;
+        
+        left: 50%;
+        transform: translate(-50%);
 
         font-family: Barlow;
         font-style: normal;
         font-weight: 500;
         font-size: 16px;
-        line-height: 25px;
+        line-height: 26px;
 
         text-align: center;
 
@@ -890,6 +890,8 @@ END OF TESTING REGION */
     }
 
     .scale {
+        display: inline;
+        
         position: absolute;
 
         width: 183px;
@@ -897,11 +899,14 @@ END OF TESTING REGION */
         left: 0px;
         top: 0px;
 
+        left: 50%;
+        transform: translate(-50%);
+
         font-family: Barlow;
         font-style: normal;
         font-weight: 600;
-        font-size: 26px;
-        line-height: 66px;
+        font-size: 24px;
+        line-height: 69px;
 
         text-align: center;
 
@@ -925,19 +930,21 @@ END OF TESTING REGION */
     }
     
     .prog-viewer-label-mobile {
-        display: inline-block;
+        display: inline;
         
         position: absolute;
         width: 183px;
         height: 24px;
-        left: 0px;
         top: 0px;
+
+        left: 50%;
+        transform: translate(-50%);
 
         font-family: Barlow;
         font-style: normal;
         font-weight: 500;
         font-size: 16px;
-        line-height: 25px;
+        line-height: 26px;
 
         text-align: center;
 
@@ -945,17 +952,20 @@ END OF TESTING REGION */
     }
 
     .progression {
+        display: inline;
         position: absolute;
-        width: 272px;
-        height: 76px;
-        left: 0px;
-        top: 8px;
-    
+        width: 183px;
+        height: 49px;
+        top: 0px;
+
+        left: 50%;
+        transform: translate(-50%);
+        
         font-family: Barlow;
         font-style: normal;
         font-weight: 600;
-        font-size: 30px;
-        line-height: 76px;
+        font-size: 24px;
+        line-height: 69px;
     
         text-align: center;
     
@@ -963,51 +973,61 @@ END OF TESTING REGION */
     }
     
     .note-viewer {
-        display: none;
-
         position: absolute;
-        width: 556px;
-        height: 84px;
+
+        width: 378px;
+        height: 56px;
         left: 0px;
-        top: 200px;
+        top: 268px;
     
         background: #F4F4F4;
         border-radius: 36px;
     }
     
     .note-viewer-label {
+        display: none;
+    }
+
+    .note-viewer-label-mobile {
+        display: inline;
+        
         position: absolute;
-        width: 273px;
+        width: 183px;
         height: 24px;
-        left: 0px;
-        top: 4px;
-    
+        top: 0px;
+        
+        left: 50%;
+        transform: translate(-50%);
+
         font-family: Barlow;
         font-style: normal;
         font-weight: 500;
         font-size: 16px;
-        line-height: 19px;
-        display: flex;
-        align-items: center;
-        text-indent: 24px;
-    
+        line-height: 26px;
+
+        text-align: center;
+
         color: #000000;
     
     }
     
     .notes {
+        display: inline;
+
         position: absolute;
-        width: 556px;
-        height: 76px;
-        left: 0px;
-        top: 8px;
-    
+        width: 100%;
+        height: 49px;
+        top: 0px;
+
+        left: 50%;
+        transform: translate(-50%);
+        
         font-family: Barlow;
         font-style: normal;
         font-weight: 600;
-        font-size: 30px;
-        line-height: 76px;
-        
+        font-size: 22px;
+        line-height: 68px;
+    
         text-align: center;
     
         color: #000000;
