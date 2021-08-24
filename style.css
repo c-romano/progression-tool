@@ -317,6 +317,10 @@
     color: #000000;
 }
 
+.scale-name-label-mobile {
+    display: none;
+}
+
 .scale {
     position: absolute;
     width: 272px;
@@ -363,6 +367,10 @@
     text-indent: 24px;
 
     color: #000000;
+}
+
+.prog-viewer-label-mobile {
+    display: none;
 }
 
 .progression {
@@ -412,6 +420,10 @@
 
     color: #000000;
 
+}
+
+.note-viewer-label-mobile {
+    display: none;
 }
 
 .notes {
@@ -801,8 +813,6 @@ END OF TESTING REGION */
         left: 39px;
         right: 39px;
         top: 0px;
-        
-        background-color: red;
 
     }
     
@@ -832,10 +842,11 @@ END OF TESTING REGION */
 
     .note-diagram {
         position: absolute;
-        width: 256px;
         height: 157px;
         left: 22px;
+        right: 22px;
         top: 24px;
+
     
         background: url(/images/Piano\ note\ diagram.png);
     }
@@ -843,85 +854,96 @@ END OF TESTING REGION */
 
     .scale-name {
         position: absolute;
-        width: 272px;
-        height: 84px;
+
+        width: 183px;
+        height: 56px;
         left: 0px;
-        top: 0px;
-    
+        top: 200px;
+
         background: #F4F4F4;
         border-radius: 36px;
     }
     
     .scale-name-label {
-        /* Scale Name: */
+        display: none;
+        
+    }
     
-    
+    .scale-name-label-mobile {
+        display: inline-block;
+        
         position: absolute;
-        width: 272px;
+        width: 183px;
         height: 24px;
         left: 0px;
-        top: 4px;
-    
+        top: 0px;
+
         font-family: Barlow;
         font-style: normal;
         font-weight: 500;
         font-size: 16px;
-        line-height: 19px;
-        display: flex;
-        align-items: center;
-        text-indent: 24px;
-    
+        line-height: 25px;
+
+        text-align: center;
+
         color: #000000;
     }
-    
+
     .scale {
         position: absolute;
-        width: 272px;
-        height: 76px;
+
+        width: 183px;
+        height: 49px;
         left: 0px;
-        top: 8px;
-    
+        top: 0px;
+
         font-family: Barlow;
         font-style: normal;
         font-weight: 600;
-        font-size: 30px;
-        line-height: 76px;
-    
+        font-size: 26px;
+        line-height: 66px;
+
         text-align: center;
-    
+
         color: #000000;
     }
     
     .progression-viewer {
+
         position: absolute;
-        width: 272px;
-        height: 84px;
-        left: 0px;
-        top: 100px;
-    
+        width: 183px;
+        height: 56px;
+        left: 195px;
+        top: 200px;
+
         background: #F4F4F4;
         border-radius: 36px;
     }
     
     .prog-viewer-label {
+        display: none;
+    }
+    
+    .prog-viewer-label-mobile {
+        display: inline-block;
+        
         position: absolute;
-        width: 272px;
+        width: 183px;
         height: 24px;
         left: 0px;
-        top: 4px;
-    
+        top: 0px;
+
         font-family: Barlow;
         font-style: normal;
         font-weight: 500;
         font-size: 16px;
-        line-height: 19px;
-        display: flex;
-        align-items: center;
-        text-indent: 24px;
-    
+        line-height: 25px;
+
+        text-align: center;
+
         color: #000000;
     }
-    
+
     .progression {
         position: absolute;
         width: 272px;
@@ -941,6 +963,8 @@ END OF TESTING REGION */
     }
     
     .note-viewer {
+        display: none;
+
         position: absolute;
         width: 556px;
         height: 84px;
