@@ -665,6 +665,7 @@ END OF TESTING REGION */
     }
     
     #daButton:hover {
+        background: #B2E87C;
     }
     
     #daButton:active {
