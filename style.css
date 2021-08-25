@@ -128,8 +128,8 @@
 
 #daButton {
     position: absolute;
-    top: 48.5%;
-    transform: translateY(-48.5%);
+    top: 48%;
+    transform: translateY(-48%);
     right: 0px;
 
     cursor: pointer;
@@ -156,6 +156,7 @@
 #daButton:active {
     background: hsl(90, 60%, 53%);
     top: 50%;
+    transform: translateY(-50%);
 }
 
 .chords-container {
@@ -641,8 +642,8 @@ END OF TESTING REGION */
     
     #daButton {
         position: absolute;
-        top: 48.5%;
-        transform: translateY(-48.5%);
+        top: 44%;
+        transform: translateY(-44%);
         right: 0px;
     
         width: 98px;
@@ -671,6 +672,7 @@ END OF TESTING REGION */
     #daButton:active {
         background: hsl(90, 60%, 53%);
         top: 50%;
+        transform: translateY(-50%);
     }
     
     .chords-container {
@@ -1053,21 +1055,548 @@ END OF TESTING REGION */
         color: #000000;
     }
     
-    /* FOR TESTING ONLY-- REMOVE LATER */
+}
+
+@media screen and (orientation: landscape) and (max-height: 490px) {
     
+    .overlay {
+        /* overlay */
     
-    #test-button {
-        top: 550px;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
+
+        width: 100%;
+    }
+
+    .header {
+        height: 44px;
+        width: 100%;
+        position: absolute;
+
+        background: #94AEF1;
+    }
+    
+
+    /* PAST THIS POINT INDICATES MOBILE LANDSCAPE OPTIMIZED */
+
+
+    .head-text {
+        /* Improvisation Coach */
+    
+        position: absolute;
+        
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 10px;
+    
+        top: 50%;
         left: 50%;
-        position: relative;
-        background-color: red;
+        transform: translate(-50%, -50%);
+    
+        color: #FFFFFF;
+    
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .main {
+        /* Auto Layout */
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* padding: 10px 20px; */
+        flex-wrap: wrap;
+    
+        position: absolute;
+        width: 378px;
+        height: 624px;
+        left: calc(50% - 378px/2);
+        top: 60px;
+
+        padding-bottom: 16px;
+    
+        background: #FFFFFF;
     }
     
-    #test-p {
-        top: 530px;
-        left: 75%;
-        position: relative;
+    .opening {
+        /* Auto Layout */
+        position: absolute;
+        width: 337px;
+        height: 56px;
+        left: 21px;
+        top: 0px;
+        z-index: 1;
+    
+        vertical-align: middle;
+    
+        /* background-color: green; */
+    
     }
-   
+    
+    .guide {
+        position: absolute;
+        width: 227px;
+        height: 56px;
+        left: 0px;
+        top: 0px;
+
+        float: left;
+    
+        z-index: 4;
+        /*
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        */
+        background: #F4F4F4;
+        border-radius: 60px;
+    }
+    
+    #guide-label { display: none; }
+
+    #mobile-guide {
+        position: absolute;
+        display: inline-block;
+        
+        width: calc(227px - 20px);
+        height: 100%;
+        top: 8.7px;
+    
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        text-align: center;
+    
+        z-index: 5;
+    
+        color: #000000;
+
+    }
+    
+    .button-wrapper {
+        position: relative;
+        height: 100%;
+        z-index: 2;
+    }
+    
+    #daButton {
+        position: absolute;
+        top: 44%;
+        transform: translateY(-44%);
+        right: 0px;
+    
+        width: 98px;
+        height: 48px;
+        /*
+        left: 239px;
+        top: 4px;
+        */
+    
+        z-index: 3;
+    
+        background: #B2E87C;
+        border: 0.6px solid #000000;
+        border-radius: 32px;
+    
+        font-family: Barlow;
+        font-size: 18px;
+        font-weight: 600;
+    
+    }
+    
+    #daButton:hover {
+        background: #B2E87C;
+    }
+    
+    #daButton:active {
+        background: hsl(90, 60%, 53%);
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .chords-container {
+
+        position: absolute;
+        width: 376px;
+        height: 220px;
+        left: 1px;
+        top: 56px;
+
+        margin-top: 16px;
+    
+    }
+    
+    .chord {
+        position: absolute;
+        width: 183px;
+        height: 105px;
+        left: 0px;
+        top: 0px;
+
+        /* background: red; */
+    }
+    
+    .chord-wrapper {
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        top: 0%;
+        bottom: 0%;
+    
+        background: #FCFCFC;
+        border: 1px solid #6D6D6D;
+        border-radius: 11px;
+    }
+    
+    .roman-wrapper {
+        position: absolute;
+        left: -0.4px;
+        top: -0.4px;
+        height: 56px;
+        width: 56px;
+    
+        background: rgba(171, 79, 173, 0.71);
+        border-radius: 10.5px;
+    
+        /* border: solid rgba(171, 79, 173, 0.71) 0.5px; */
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .roman-label {
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        top: 0%;
+        bottom: 0%;
+    
+        line-height: 56px;
+    
+        vertical-align: middle;
+    
+        font-family: Noto Sans;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 30px;
+        
+        text-align: center;
+    
+        letter-spacing: 0;
+    
+        color: #FFFFFF;
+    }
+    
+    .chord-name {
+        position: absolute;
+        left: 29.17%;
+        right: 0%;
+        top: 0%;
+        bottom: 48.28%;
+
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 57px;
+        
+        /*
+        display: flex;
+        align-items: center;
+        */
+
+        text-align: center;
+
+        color: #000000;
+    }
+    
+    .chord-notes {
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        top: 44.83%;
+        bottom: 0%;
+    
+        font-family: Barlow;
+        font-style: normal;
+        font-size: 31px;
+        line-height: 62px;
+    
+        text-align: center;
+
+        color: #6D6D6D;
+    }
+    
+    #chord1 {
+        left: 0px;
+    }
+    
+    #chord2 {
+        left: 193px;
+    }
+    
+    #chord3 {
+        top: 115px;
+        left: 0px;
+    }
+    
+    #chord4 {
+        top: 115px;
+        left: 193px;
+    }
+    
+    .key-info {
+        position: absolute;
+        
+        width: 378px;
+        height: 324px;
+        left: 0px;
+        top: 292px;
+        margin-top: 10px;
+    
+    }
+    
+    .note-diagram-wrapper {
+        position: absolute;
+        height: 182px;
+        width: 300px;
+        left: 39px;
+        right: 39px;
+        top: 0px;
+
+    }
+    
+    .note-diagram-label {
+        display: none;
+    }
+    
+    .mobile-diagram-label {
+        display: inline;
+
+        position: absolute;
+        width: 300px;
+        height: 24px;
+        left: 0px;
+        top: 0px;
+
+        margin: 0;
+    
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+
+        text-align: center;
+    
+        color: #000000;
+    }
+
+    .note-diagram {
+        position: absolute;
+        height: 157px;
+        left: 22px;
+        right: 22px;
+        top: 24px;
+
+        background: url(/images/Piano\ note\ diagram.png);
+    }
+    
+
+    .scale-name {
+        position: absolute;
+
+        width: 183px;
+        height: 56px;
+        left: 0px;
+        top: 200px;
+
+        background: #F4F4F4;
+        border-radius: 36px;
+    }
+    
+    .scale-name-label {
+        display: none;
+        
+    }
+    
+    .scale-name-label-mobile {
+        display: block;
+        
+        position: absolute;
+        width: 183px;
+        height: 24px;
+        top: 0px;
+        
+        margin: 0;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        
+
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 26px;
+
+        text-align: center;
+
+        color: #000000;
+    }
+
+    .scale {
+        display: block;
+        
+        position: absolute;
+
+        width: 183px;
+        height: 49px;
+        left: 0px;
+        top: 0px;
+
+        margin: 0;
+        margin-block-start: 0;
+        margin-block-end: 0;
+
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 69px;
+
+        text-align: center;
+
+        color: #000000;
+    }
+    
+    .progression-viewer {
+
+        position: absolute;
+        width: 183px;
+        height: 56px;
+        left: 195px;
+        top: 200px;
+
+        background: #F4F4F4;
+        border-radius: 36px;
+    }
+    
+    .prog-viewer-label {
+        display: none;
+    }
+    
+    .prog-viewer-label-mobile {
+        display: block;
+        
+        position: absolute;
+        width: 183px;
+        height: 24px;
+        top: 0px;
+
+        margin: 0;
+        margin-block-start: 0;
+        margin-block-end: 0;
+
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 26px;
+
+        text-align: center;
+
+        color: #000000;
+    }
+
+    .progression {
+        display: block;
+        position: absolute;
+        width: 183px;
+        height: 49px;
+        top: 0px;
+        
+        margin: 0;
+        margin-block-start: 0;
+        margin-block-end: 0;
+
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 69px;
+    
+        text-align: center;
+    
+        color: #000000;
+    }
+    
+    .note-viewer {
+        position: absolute;
+
+        width: 378px;
+        height: 56px;
+        left: 0px;
+        top: 268px;
+    
+        background: #F4F4F4;
+        border-radius: 36px;
+    }
+    
+    .note-viewer-label {
+        display: none;
+    }
+
+    .note-viewer-label-mobile {
+        display: block;
+        
+        position: absolute;
+        width: 100%;
+        height: 24px;
+        top: 0px;
+
+        margin: 0;
+        margin-block-start: 0;
+        margin-block-end: 0;
+
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 26px;
+
+        text-align: center;
+
+        color: #000000;
+    
+    }
+    
+    .notes {
+        display: block;
+
+        position: absolute;
+        width: 100%;
+        height: 49px;
+        top: 0px;
+        
+        margin: 0;
+        margin-block-start: 0;
+        margin-block-end: 0;
+
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 68px;
+    
+        text-align: center;
+    
+        color: #000000;
+    }
 
 }
