@@ -1,3 +1,10 @@
+if (document.webkitFullscreenElement) {
+    document.webkitCancelFullScreen();
+} else {
+    const el = document.documentElement;
+    el.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+}
+
 /* this is where the HTML elements will be saved to variables
 
 const scale = document.getElementByClass("scale");
