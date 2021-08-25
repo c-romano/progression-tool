@@ -128,9 +128,11 @@
 
 #daButton {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 48.5%;
+    transform: translateY(-48.5%);
     right: 0px;
+
+    cursor: pointer;
 
     width: 136px;
     height: 40px;
@@ -148,7 +150,12 @@
 }
 
 #daButton:hover {
-    background: #6ebc21;
+    background: hsl(90, 70%, 63%)
+}
+
+#daButton:active {
+    background: hsl(90, 60%, 53%);
+    top: 50%;
 }
 
 .chords-container {
@@ -634,8 +641,8 @@ END OF TESTING REGION */
     
     #daButton {
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 48.5%;
+        transform: translateY(-48.5%);
         right: 0px;
     
         width: 98px;
@@ -658,7 +665,11 @@ END OF TESTING REGION */
     }
     
     #daButton:hover {
-        background: #6ebc21;
+    }
+    
+    #daButton:active {
+        background: hsl(90, 60%, 53%);
+        top: 50%;
     }
     
     .chords-container {
@@ -847,7 +858,6 @@ END OF TESTING REGION */
         right: 22px;
         top: 24px;
 
-    
         background: url(/images/Piano\ note\ diagram.png);
     }
     
@@ -877,9 +887,6 @@ END OF TESTING REGION */
         height: 24px;
         top: 0px;
         
-        left: 50%;
-        transform: translate(-50%);
-        
         margin: 0;
         margin-block-start: 0;
         margin-block-end: 0;
@@ -905,9 +912,6 @@ END OF TESTING REGION */
         height: 49px;
         left: 0px;
         top: 0px;
-
-        left: 50%;
-        transform: translate(-50%);
 
         margin: 0;
         margin-block-start: 0;
@@ -948,9 +952,6 @@ END OF TESTING REGION */
         height: 24px;
         top: 0px;
 
-        left: 50%;
-        transform: translate(-50%);
-
         margin: 0;
         margin-block-start: 0;
         margin-block-end: 0;
@@ -972,9 +973,6 @@ END OF TESTING REGION */
         width: 183px;
         height: 49px;
         top: 0px;
-
-        left: 50%;
-        transform: translate(-50%);
         
         margin: 0;
         margin-block-start: 0;
@@ -1011,12 +1009,9 @@ END OF TESTING REGION */
         display: block;
         
         position: absolute;
-        width: 183px;
+        width: 100%;
         height: 24px;
         top: 0px;
-        
-        left: 50%;
-        transform: translate(-50%);
 
         margin: 0;
         margin-block-start: 0;
@@ -1041,9 +1036,6 @@ END OF TESTING REGION */
         width: 100%;
         height: 49px;
         top: 0px;
-
-        left: 50%;
-        transform: translate(-50%);
         
         margin: 0;
         margin-block-start: 0;
