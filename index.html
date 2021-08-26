@@ -22,6 +22,10 @@
                         <p id="guide-label">Press the button to have a random scale and chord progression generated for you.</p>
                         <p id="mobile-guide">Press button to generate a scale and chord progression.</p>
                     </div>
+                    <div id="landscape-help-icon">
+                        <button id="landscape-help-button" onclick="landscapeModal()">?</button>
+                        <!-- <p id="landcape-help-text">?</p> -->
+                    </div>
                     <div class="button-wrapper">
                         <button id="daButton" onclick="generateRandomImprov()">Generate!</button>
                     </div>
@@ -96,7 +100,7 @@
                         <h6 class="scale-name-label-mobile">Scale Name</h6>
                         <h5 class="scale" id="scale">Gb Major</h5>
                     </div>
-                    
+
                     <div class="progression-viewer">
                         <h6 class="prog-viewer-label">
                             Progression:
@@ -123,6 +127,12 @@
                         <h5 class="notes" id="notes">Gb - Ab - Bb - Cb - Db - Eb - F - Gb</h5>
                     </div>
                 </div>
+            </div>
+            <div id="landscape-help-modal">
+                <p id="modal-text">
+                    Press the button to have a random scale and chord progression generated.
+                </p>
+                <button id="close-modal" onclick="closeModal()">X</button>
             </div>
 
             <!-- testing section

@@ -120,6 +120,8 @@
 
 #mobile-guide { display: none;}
 
+#landscape-help-icon { display: none;}
+
 .button-wrapper {
     position: relative;
     height: 100%;
@@ -496,6 +498,9 @@
     background: url(/images/Piano\ note\ diagram.png);
 }
 
+#landscape-help-modal {
+    display: none;
+}
 
 /* FOR TESTING ONLY-- REMOVE LATER
 
@@ -634,6 +639,8 @@ END OF TESTING REGION */
 
     }
     
+    #landscape-help-icon { display: none;}
+
     .button-wrapper {
         position: relative;
         height: 100%;
@@ -1055,6 +1062,9 @@ END OF TESTING REGION */
         color: #000000;
     }
     
+    #landscape-help-modal {
+        display: none;
+    }
 }
 
 @media screen and (orientation: landscape) and (max-height: 490px) {
@@ -1510,7 +1520,7 @@ END OF TESTING REGION */
     
         /* vertical-align: middle; */
     
-        background-color: green;
+        /* background-color: green; */
     
     }
     
@@ -1557,6 +1567,50 @@ END OF TESTING REGION */
 
     }
     
+    #landscape-help-icon {
+        display: block;
+
+        position: absolute;
+        width: 33px;
+        height: 33px;
+        left: 83px;
+        top: 0px;
+
+        z-index: 6;
+
+    }    
+
+    #landscape-help-button {
+        display: block;
+
+        position: absolute;
+        width: 33px;
+        height: 33px;
+        left: 0px;
+        top: 0px;
+
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        
+        line-height: 24px;
+        
+        z-index: 7;
+
+        border-radius: 50%;
+
+        background: #B9B9B9;
+        border: 0.6px solid #000000;
+        box-sizing: border-box;
+    }
+
+    #landscape-help-button:active {
+        background: #969696;
+        top: 0.5px;
+        line-height: 25px;
+    }
+
     .button-wrapper {
         position: absolute;
         height: 48px;
@@ -1596,5 +1650,62 @@ END OF TESTING REGION */
     #daButton:active {
         background: hsl(90, 60%, 53%);
         top: 25px;
+    }
+    
+    #landscape-help-modal {
+        display: none;
 
+        position: fixed;
+        z-index: 8;
+        left: calc(50% - 290px/2 + 185px);
+        top: calc(50% - 100px/2 - 20px);
+        width: 290px; 
+        height: 110px;
+        overflow: auto; 
+        background-color: rgb(196, 196, 196); 
+        background-color: rgba(179, 179, 179, 0.96);
+
+        border-radius: 9px;
+
+
+    }
+
+    #modal-text {
+        position:relative;
+
+        font-family: Barlow;
+        font-style: normal;
+        font-size: 20px;
+        
+        left: 0px;
+
+        padding: 0 30px 0 20px;
+        line-height: 24px;
+
+        color: rgb(255, 255, 255);
+
+        top: 19px;
+        
+        text-align: center;
+    }
+
+    #close-modal {
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        right: 2px;
+        top: 2px;
+
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+
+        background-color: transparent;
+        background-repeat:no-repeat;
+        border: none;
+        cursor:pointer;
+        overflow: hidden;
+        outline:none;
+    }
 }

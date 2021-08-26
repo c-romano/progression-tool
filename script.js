@@ -391,3 +391,11 @@ function generateRandomImprov() {
     document.getElementById("notes").innerHTML=generatedScale.convertToString();
 
 }
+
+function landscapeModal() {
+    document.getElementById("landscape-help-modal").style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById("landscape-help-modal").style.display = "none";
+}
