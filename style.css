@@ -1098,8 +1098,6 @@ END OF TESTING REGION */
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
 
-    /* PAST THIS POINT INDICATES MOBILE LANDSCAPE OPTIMIZED */
-
     .main {
         /* Auto Layout */
     
@@ -1110,14 +1108,149 @@ END OF TESTING REGION */
         flex-wrap: wrap;
     
         position: absolute;
-        width: 378px;
-        height: 624px;
-        left: calc(50% - 378px/2);
-        top: 60px;
+        width: 756px;
+        height: 232px;
+        
+        left: calc(50% - 756px/2 + 0px);
+
+        top: 52px;
 
         padding-bottom: 16px;
     
         background: #FFFFFF;
+    }
+
+    .chords-container {
+
+        position: absolute;
+        width: 756px;
+        height: 89px;
+        left: 0px;
+        top: 0px;
+        margin: 0;
+    
+    }
+
+    .chord {
+        position: absolute;
+        width: 183px;
+        height: 89px;
+        left: 0px;
+        top: 0px;
+
+        /* background: red; */
+    }
+    
+    .chord-wrapper {
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        top: 0%;
+        bottom: 0%;
+    
+        background: #FCFCFC;
+        border: 1px solid #6D6D6D;
+        border-radius: 11px;
+    }
+
+    /* UP TO THIS POINT INDICATES MOBILE LANDSCAPE OPTIMIZED */
+
+    .roman-label {
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        top: 0%;
+        bottom: 0%;
+    
+        line-height: 50px;
+    
+        vertical-align: middle;
+    
+        font-family: Noto Sans;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 30px;
+        
+        text-align: center;
+    
+        letter-spacing: 0;
+    
+        color: #FFFFFF;
+    }
+
+    .roman-wrapper {
+        position: absolute;
+        left: -0.4px;
+        top: -0.4px;
+        height: 50px;
+        width: 50px;
+    
+        background: rgba(171, 79, 173, 0.71);
+        border-radius: 10.5px;
+    
+        /* border: solid rgba(171, 79, 173, 0.71) 0.5px; */
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .chord-name {
+        position: absolute;
+        left: 29.17%;
+        right: 0%;
+        top: 0%;
+        bottom: 48.28%;
+
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 57px;
+        
+        /*
+        display: flex;
+        align-items: center;
+        */
+
+        text-align: center;
+
+        color: #000000;
+    }
+    
+    .chord-notes {
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        top: 44.83%;
+        bottom: 0%;
+    
+        font-family: Barlow;
+        font-style: normal;
+        font-size: 31px;
+        line-height: 62px;
+    
+        text-align: center;
+
+        color: #6D6D6D;
+    }
+    
+    #chord1 {
+        left: 0px;
+    }
+    
+    #chord2 {
+        left: 191px;
+    }
+    
+    #chord3 {
+        top: 0px;
+        left: 382px;
+    }
+    
+    #chord4 {
+        top: 0px;
+        left: 573px;
     }
     
     .opening {
@@ -1215,138 +1348,6 @@ END OF TESTING REGION */
         background: hsl(90, 60%, 53%);
         top: 50%;
         transform: translateY(-50%);
-    }
-    
-    .chords-container {
-
-        position: absolute;
-        width: 376px;
-        height: 220px;
-        left: 1px;
-        top: 56px;
-
-        margin-top: 16px;
-    
-    }
-    
-    .chord {
-        position: absolute;
-        width: 183px;
-        height: 105px;
-        left: 0px;
-        top: 0px;
-
-        /* background: red; */
-    }
-    
-    .chord-wrapper {
-        position: absolute;
-        left: 0%;
-        right: 0%;
-        top: 0%;
-        bottom: 0%;
-    
-        background: #FCFCFC;
-        border: 1px solid #6D6D6D;
-        border-radius: 11px;
-    }
-    
-    .roman-wrapper {
-        position: absolute;
-        left: -0.4px;
-        top: -0.4px;
-        height: 56px;
-        width: 56px;
-    
-        background: rgba(171, 79, 173, 0.71);
-        border-radius: 10.5px;
-    
-        /* border: solid rgba(171, 79, 173, 0.71) 0.5px; */
-    
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .roman-label {
-        position: absolute;
-        left: 0%;
-        right: 0%;
-        top: 0%;
-        bottom: 0%;
-    
-        line-height: 56px;
-    
-        vertical-align: middle;
-    
-        font-family: Noto Sans;
-        font-style: normal;
-        font-weight: 800;
-        font-size: 30px;
-        
-        text-align: center;
-    
-        letter-spacing: 0;
-    
-        color: #FFFFFF;
-    }
-    
-    .chord-name {
-        position: absolute;
-        left: 29.17%;
-        right: 0%;
-        top: 0%;
-        bottom: 48.28%;
-
-        font-family: Barlow;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 28px;
-        line-height: 57px;
-        
-        /*
-        display: flex;
-        align-items: center;
-        */
-
-        text-align: center;
-
-        color: #000000;
-    }
-    
-    .chord-notes {
-        position: absolute;
-        left: 0%;
-        right: 0%;
-        top: 44.83%;
-        bottom: 0%;
-    
-        font-family: Barlow;
-        font-style: normal;
-        font-size: 31px;
-        line-height: 62px;
-    
-        text-align: center;
-
-        color: #6D6D6D;
-    }
-    
-    #chord1 {
-        left: 0px;
-    }
-    
-    #chord2 {
-        left: 193px;
-    }
-    
-    #chord3 {
-        top: 115px;
-        left: 0px;
-    }
-    
-    #chord4 {
-        top: 115px;
-        left: 193px;
     }
     
     .key-info {
