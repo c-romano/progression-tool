@@ -13,7 +13,6 @@
 }
 
 .overlay {
-    /* overlay */
 
     position: absolute;
     left: 0px;
@@ -29,7 +28,6 @@
 }
 
 .head-text {
-    /* Improvisation Coach */
 
     position: absolute;
     
@@ -48,15 +46,11 @@
 }
 
 .main {
-    /* Frame 1 */
-
-
-    /* Auto Layout */
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* padding: 10px 20px; */
+
     flex-wrap: wrap;
 
 
@@ -70,7 +64,6 @@
 }
 
 .opening {
-    /* Auto Layout */
 
     position: absolute;
     width: 476px;
@@ -525,7 +518,6 @@ END OF TESTING REGION */
 @media screen and (max-width: 490px) {
     
     .overlay {
-        /* overlay */
     
         position: absolute;
         left: 0px;
@@ -545,7 +537,6 @@ END OF TESTING REGION */
     }
     
     .head-text {
-        /* Improvisation Coach */
     
         position: absolute;
         
@@ -564,12 +555,10 @@ END OF TESTING REGION */
     }
 
     .main {
-        /* Auto Layout */
     
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* padding: 10px 20px; */
         flex-wrap: wrap;
     
         position: absolute;
@@ -584,7 +573,6 @@ END OF TESTING REGION */
     }
     
     .opening {
-        /* Auto Layout */
         position: absolute;
         width: 337px;
         height: 56px;
@@ -593,8 +581,6 @@ END OF TESTING REGION */
         z-index: 1;
     
         vertical-align: middle;
-    
-        /* background-color: green; */
     
     }
     
@@ -768,11 +754,6 @@ END OF TESTING REGION */
         font-weight: bold;
         font-size: 28px;
         line-height: 57px;
-        
-        /*
-        display: flex;
-        align-items: center;
-        */
 
         text-align: center;
 
@@ -788,7 +769,7 @@ END OF TESTING REGION */
     
         font-family: Barlow;
         font-style: normal;
-        font-size: 31px;
+        font-size: 30px;
         line-height: 62px;
     
         text-align: center;
@@ -1090,7 +1071,6 @@ END OF TESTING REGION */
     }
     
     .head-text {
-        /* Improvisation Coach */
     
         position: absolute;
         
@@ -1109,12 +1089,11 @@ END OF TESTING REGION */
     }
 
     .main {
-        /* Auto Layout */
     
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* padding: 10px 20px; */
+
         flex-wrap: wrap;
     
         position: absolute;
@@ -1235,7 +1214,7 @@ END OF TESTING REGION */
     
         font-family: Barlow;
         font-style: normal;
-        font-size: 31px;
+        font-size: 30px;
         line-height: 56px;
     
         text-align: center;
@@ -1536,11 +1515,7 @@ END OF TESTING REGION */
         float: left;
     
         z-index: 4;
-        /*
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        */
+
         background: #F4F4F4;
         border-radius: 60px;
     }
@@ -1667,7 +1642,6 @@ END OF TESTING REGION */
 
         border-radius: 9px;
 
-
     }
 
     #modal-text {
@@ -1701,11 +1675,17 @@ END OF TESTING REGION */
         font-weight: bold;
         font-size: 18px;
 
+        border-radius: 50%;
+
         background-color: transparent;
         background-repeat:no-repeat;
         border: none;
         cursor:pointer;
         overflow: hidden;
         outline:none;
+    }
+
+    #close-modal:active {
+        color: white;
     }
 }

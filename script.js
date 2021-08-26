@@ -1,4 +1,4 @@
-/* this is where the HTML elements will be saved to variables
+/* could save HTML elements to variables here
 
 const scale = document.getElementByClass("scale");
 const progression = document.getElementByClass("progression");
