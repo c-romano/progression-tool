@@ -1153,8 +1153,6 @@ END OF TESTING REGION */
         border-radius: 11px;
     }
 
-    /* UP TO THIS POINT INDICATES MOBILE LANDSCAPE OPTIMIZED */
-
     .roman-label {
         position: absolute;
         left: 0%;
@@ -1197,7 +1195,7 @@ END OF TESTING REGION */
 
     .chord-name {
         position: absolute;
-        left: 29.17%;
+        left: 25.04%;
         right: 0%;
         top: 0%;
         bottom: 48.28%;
@@ -1206,7 +1204,7 @@ END OF TESTING REGION */
         font-style: normal;
         font-weight: bold;
         font-size: 28px;
-        line-height: 57px;
+        line-height: 55px;
         
         /*
         display: flex;
@@ -1228,7 +1226,7 @@ END OF TESTING REGION */
         font-family: Barlow;
         font-style: normal;
         font-size: 31px;
-        line-height: 62px;
+        line-height: 56px;
     
         text-align: center;
 
@@ -1253,160 +1251,17 @@ END OF TESTING REGION */
         left: 573px;
     }
     
-    .opening {
-        /* Auto Layout */
-        position: absolute;
-        width: 337px;
-        height: 56px;
-        left: 21px;
-        top: 0px;
-        z-index: 1;
-    
-        vertical-align: middle;
-    
-        /* background-color: green; */
-    
-    }
-    
-    .guide {
-        position: absolute;
-        width: 227px;
-        height: 56px;
-        left: 0px;
-        top: 0px;
-
-        float: left;
-    
-        z-index: 4;
-        /*
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        */
-        background: #F4F4F4;
-        border-radius: 60px;
-    }
-    
-    #guide-label { display: none; }
-
-    #mobile-guide {
-        position: absolute;
-        display: inline-block;
-        
-        width: calc(227px - 20px);
-        height: 100%;
-        top: 8.7px;
-    
-        font-family: Barlow;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 15px;
-        text-align: center;
-    
-        z-index: 5;
-    
-        color: #000000;
-
-    }
-    
-    .button-wrapper {
-        position: relative;
-        height: 100%;
-        z-index: 2;
-    }
-    
-    #daButton {
-        position: absolute;
-        top: 44%;
-        transform: translateY(-44%);
-        right: 0px;
-    
-        width: 98px;
-        height: 48px;
-        /*
-        left: 239px;
-        top: 4px;
-        */
-    
-        z-index: 3;
-    
-        background: #B2E87C;
-        border: 0.6px solid #000000;
-        border-radius: 32px;
-    
-        font-family: Barlow;
-        font-size: 18px;
-        font-weight: 600;
-    
-    }
-    
-    #daButton:hover {
-        background: #B2E87C;
-    }
-    
-    #daButton:active {
-        background: hsl(90, 60%, 53%);
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    
     .key-info {
         position: absolute;
         
-        width: 378px;
-        height: 324px;
-        left: 0px;
-        top: 292px;
-        margin-top: 10px;
-    
-    }
-    
-    .note-diagram-wrapper {
-        position: absolute;
-        height: 182px;
-        width: 300px;
-        left: 39px;
-        right: 39px;
-        top: 0px;
-
-    }
-    
-    .note-diagram-label {
-        display: none;
-    }
-    
-    .mobile-diagram-label {
-        display: inline;
-
-        position: absolute;
-        width: 300px;
-        height: 24px;
-        left: 0px;
-        top: 0px;
+        width: 588px;
+        height: 139px;
+        left: 37px;
+        top: 91px;
 
         margin: 0;
-    
-        font-family: Barlow;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 18px;
-        line-height: 22px;
 
-        text-align: center;
-    
-        color: #000000;
     }
-
-    .note-diagram {
-        position: absolute;
-        height: 157px;
-        left: 22px;
-        right: 22px;
-        top: 24px;
-
-        background: url(/images/Piano\ note\ diagram.png);
-    }
-    
 
     .scale-name {
         position: absolute;
@@ -1414,7 +1269,7 @@ END OF TESTING REGION */
         width: 183px;
         height: 56px;
         left: 0px;
-        top: 200px;
+        top: 14px;
 
         background: #F4F4F4;
         border-radius: 36px;
@@ -1480,7 +1335,7 @@ END OF TESTING REGION */
         width: 183px;
         height: 56px;
         left: 195px;
-        top: 200px;
+        top: 14px;
 
         background: #F4F4F4;
         border-radius: 36px;
@@ -1541,7 +1396,7 @@ END OF TESTING REGION */
         width: 378px;
         height: 56px;
         left: 0px;
-        top: 268px;
+        top: 82px;
     
         background: #F4F4F4;
         border-radius: 36px;
@@ -1597,5 +1452,149 @@ END OF TESTING REGION */
     
         color: #000000;
     }
+
+    .note-diagram-wrapper {
+        position: absolute;
+        width: 185px;
+        height: 139px;
+        left: 403px;
+        top: 0px;
+
+    }
+    
+    .note-diagram-label {
+        display: none;
+    }
+    
+    .mobile-diagram-label {
+        display: inline;
+
+        position: absolute;
+        width: 185px;
+        height: 30px;
+        left: 0px;
+        top: 4px;
+
+        margin: 0;
+    
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+
+        text-align: center;
+    
+        color: #000000;
+    }
+
+    .note-diagram {
+        position: absolute;
+        height: 114px;
+        width: 100%;
+        left: 0;
+        top: 25px;
+
+        background: url(/images/Piano\ note\ diagram.png);
+    }
+
+    .opening {
+        /* Auto Layout */
+        position: absolute;
+        width: 116px;
+        height: 85px;
+        left: 633px;
+        top: 111px;
+
+        z-index: 1;
+    
+        /* vertical-align: middle; */
+    
+        background-color: green;
+    
+    }
+    
+    .guide {
+        display: none;
+
+        position: absolute;
+        width: 227px;
+        height: 56px;
+        left: 0px;
+        top: 0px;
+
+        float: left;
+    
+        z-index: 4;
+        /*
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        */
+        background: #F4F4F4;
+        border-radius: 60px;
+    }
+    
+    #guide-label { display: none; }
+
+    #mobile-guide {
+        position: absolute;
+        display: inline-block;
+        
+        width: calc(227px - 20px);
+        height: 100%;
+        /* top: 8.7px; */
+    
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        text-align: center;
+    
+        z-index: 5;
+    
+        color: #000000;
+
+    }
+    
+    .button-wrapper {
+        position: absolute;
+        height: 48px;
+        width: 98px;
+        top: 37px;
+        z-index: 2;
+    }
+    
+    #daButton {
+        position: absolute;
+        
+        right: 0px;
+    
+        width: 98px;
+        height: 48px;
+        /*
+        left: 239px;
+        top: 4px;
+        */
+    
+        z-index: 3;
+    
+        background: #B2E87C;
+        border: 0.6px solid #000000;
+        border-radius: 32px;
+    
+        font-family: Barlow;
+        font-size: 18px;
+        font-weight: 600;
+    
+    }
+    
+    #daButton:hover {
+        background: #B2E87C;
+    }
+    
+    #daButton:active {
+        background: hsl(90, 60%, 53%);
+        top: 25px;
 
 }
